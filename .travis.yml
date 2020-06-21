@@ -12,6 +12,7 @@ script:
     - docker run -e CI=true priyank98/sample-app npm run test -- --coverage
 
 deploy:
+  skip_cleanup: true
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "sample-docker-react"
